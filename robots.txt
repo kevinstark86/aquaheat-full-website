@@ -1,0 +1,3 @@
+User-agent: *
+Allow:
+Sitemap: https://aquaheatplumbing.co.uk/sitemap.xml

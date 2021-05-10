@@ -1,0 +1,26 @@
+RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteRule ^index\.(html?|php)$ / [L,R=301,NC]
+
+RewriteCond %{HTTP_HOST} ^aquaheatplumbing.co.uk [NC]
+RewriteRule ^(.*)$ http://www.aquaheatplumbing.co.uk/$1 [L,R=301]
+
+Redirect 301 /central-heating-installation-repairs/ https://aquaheatplumbing.co.uk/central-heating.html
+Redirect 301 /powerflushing-service/ https://aquaheatplumbing.co.uk/power-flushing.html
+Redirect 301 /boiler-repairs/ https://aquaheatplumbing.co.uk/boiler-repair-service.html
+Redirect 301 /boiler-installations/ https://aquaheatplumbing.co.uk/boiler-installation.html
+Redirect 301 /drainage/ https://aquaheatplumbing.co.uk/
+Redirect 301 /boiler-finance/ https://aquaheatplumbing.co.uk/boiler-finance.html
+Redirect 301 /central-heating https://aquaheatplumbing.co.uk/central-heating.html
+Redirect 301 /powerflushing-service/ https://aquaheatplumbing.co.uk/power-flushing.html
+
+ErrorDocument 404 /index.html
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
